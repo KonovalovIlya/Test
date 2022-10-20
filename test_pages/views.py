@@ -12,7 +12,7 @@ def form(request):
             surname = form.cleaned_data.get('surname')
             # user = \
             User.objects.create(name=name, surname=surname)
-            return redirect('')
+            return redirect('/')
     form = UserForm()
     return render(request, 'test_pages/main.html', {'form': form})
 
